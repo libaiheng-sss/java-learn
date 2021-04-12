@@ -10,7 +10,7 @@ import static com.lbh.algorithm.Endorsement.setSignature;
 
 public class Test {
     public static void main(String[] args) throws UnrecoverableKeyException, CertificateException, NoSuchAlgorithmException, KeyStoreException, IOException, InvalidKeySpecException, SignatureException, InvalidKeyException {
-        GetKeyByP12File alias = new GetKeyByP12File("C:\\Users\\libaiheng\\Desktop\\农商工作\\20060400000466904.p12", "111111", "alias");
+        GetKeyByP12File alias = new GetKeyByP12File("/home/libaiheng/Downloads/20060400000466904.p12", "111111", "alias");
         String privateKey = alias.getPrivateKey();
         String publicKey = alias.getPublicKey();
 
