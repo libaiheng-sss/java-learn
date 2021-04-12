@@ -1,3 +1,4 @@
 rootProject.name = 'java-learn'
 include 'java-algorithm'
+include 'java-json-xml'
 

@@ -9,7 +9,7 @@ import static com.lbh.algorithm.Endorsement.checkTestSig;
 import static com.lbh.algorithm.Endorsement.setSignature;
 
 public class Test {
-    public static void main(String[] args) throws IOException, KeyStoreException, UnrecoverableKeyException, CertificateException, NoSuchAlgorithmException, InvalidKeySpecException, SignatureException, InvalidKeyException {
+    public static void main(String[] args) throws UnrecoverableKeyException, CertificateException, NoSuchAlgorithmException, KeyStoreException, IOException, InvalidKeySpecException, SignatureException, InvalidKeyException {
         GetKeyByP12File alias = new GetKeyByP12File("C:\\Users\\libaiheng\\Desktop\\农商工作\\20060400000466904.p12", "111111", "alias");
         String privateKey = alias.getPrivateKey();
         String publicKey = alias.getPublicKey();
@@ -21,5 +21,6 @@ public class Test {
         System.out.println(name);
         boolean libaiheng = checkTestSig(publicKey, "黎佰恒", name);
         System.out.println(libaiheng);
+
     }
 }
